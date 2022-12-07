@@ -1,0 +1,251 @@
+/* Para deixar o cabeçalho com os links do lado direito e a logo do lado esquerdo*/
+.cabecalho{
+    align-items: center;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+/**/
+
+
+.menu__lista{
+    display: flex;
+}
+
+.menu__item{
+    list-style: none;
+}
+
+.menu__item:last-child a{
+    margin-right: 0;
+}
+
+.menu__link{
+    text-decoration: none;
+    color: #808080;
+    margin-right: 1.25rem;
+    text-transform: lowercase;
+}
+
+.ativo{
+    font-weight: bold;
+}
+
+.menu__link:hover{
+    text-decoration: underline;
+}
+
+
+.banner{
+    position: relative;
+}
+
+.banner__imagem{
+    background: url('../img/banner.jpg') no-repeat center / cover;
+    height: calc(100vh - 72px);
+    width: 100%;
+}
+
+.banner__titulo{
+    color: #fdfdfd;
+    font-family: Pacifico, cursive;
+    font-size: 5.0625rem;
+    position: absolute;
+    left: 50%;
+    text-shadow: 0 4px 4px #000000bf;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font-size: 4rem;
+}
+
+
+.sobre{
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.sobre__titulo{
+    color: #8d0606;
+    font-family: Pacifico, cursive;
+    font-size: 3.187rem;
+}
+
+.sobre__descricao{
+    color: #595959;
+    font-size: 1.75rem;
+    font-weight: 100;   
+}
+
+
+.receitas{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.receita{
+    background: #80808020;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-height: 450px;
+    max-width: 300px;
+    min-height: 450px;
+    min-height: 300px;
+    width: 100%;
+    margin-top: 2rem;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.182);
+    border-radius: 30px 30px 30px 10px;
+}
+
+.receita__imagem{
+    text-align: center;
+    height: 181px;
+    width: 300px;
+    border-radius: 30px 30px 0 0;
+}
+
+.receita__titulo{
+    font-size: 1.4375rem;
+}
+
+.receita__descricao{
+    font-size: 1.1875rem;
+    line-height: 1.5;
+}
+
+.receita__conteudo{
+    padding: 1rem;
+}
+
+.receita__botao{
+    background-color: #8d0606;
+    border: none;
+    border-radius: 5px;
+    color: #fdfdfd;
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+.receita__botao:hover{
+    background-color: #620404;
+    cursor: pointer;
+}
+
+
+.quem-somos{
+    text-align: center;
+    padding: 5rem;
+}
+
+.quem-somos__titulo{
+    margin-bottom: 1rem;
+    color: #8d0606;
+    font-size: 3.1075rem;
+    font-family: Pacifico, cursive;
+}
+
+.quem-somos__descricao{
+    font-weight: 100;
+    font-size: 1.75rem;
+    color:#595959;
+}
+
+
+.pessoa{
+    display: flex;
+    flex-direction: column;
+}
+
+.pessoa__nome{
+    margin: 1rem 0;
+    font-family: Pacifico, cursive;
+    color:#8d0606;
+    font-size: 2rem;
+}
+
+.pessoa__funcao{
+    text-transform: lowercase;
+    color:#595959;
+    font-size: 1.25rem;
+}
+
+.pessoas{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3rem;
+}
+
+.pessoa__imagem{
+    height: 300px;
+    margin: 0 auto;
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+}
+
+.pessoa__imagem--roberta{
+    background-image: url('../img/pessoas/roberta.jpg');
+}
+
+.pessoa__imagem--marcela{
+    background-image: url('../img/pessoas/marcela.jpg');
+}
+
+.pessoa__imagem--andreia{
+    background-image: url('../img/pessoas/andreia.jpg');
+}
+
+.rodape{
+    background:#bfbfbf;
+    color: #fdfdfd;
+    text-align: right;
+    padding: 1.5625rem 5rem;
+    text-transform: lowercase;
+}
+
+@media screen and (max-width: 768px) {
+    .cabecalho{
+        justify-content: center;
+        padding: 0 1rem;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .banner__titulo{
+        font-size: 2.5rem ;
+    }
+
+    .banner__imagem{
+        height: calc(100vh - 51px);
+    }
+
+    .sobre{
+        padding: 2.5rem 1rem 0 1rem;
+    }
+
+    .sobre__titulo{
+        font-size: 2rem;
+    }
+
+    .sobre__descricao{
+        font-size: 1.3rem;
+    }
+
+    .receitas{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .pessoas{
+        flex-direction: column;
+    }
+}
